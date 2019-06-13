@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # picoPlaca
-Sistema de verificación de  circulación de vehículos
+Vehicle road validation system
 =======
 # PicoYplaca
 
