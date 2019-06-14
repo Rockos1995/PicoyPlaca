@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <span>Pico & Placa Predictor</span>
+</mat-toolbar>
+<br /><br />
+<fieldset>
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field appearance="outline" [hideRequiredMarker]="true">
+        <mat-label>Plate number</mat-label>
+        <input type="text" matInput [(ngModel)]="plateNumber" placeholder="ABC0000" pattern="[A-Za-z]{3}[0-9]{4}">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field appearance="outline" [hideRequiredMarker]="true">
+        <mat-label>Date</mat-label>
+        <input type="text" matInput [(ngModel)]="date" placeholder="YYYY-MM-DD"
+          pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field appearance="outline" [hideRequiredMarker]="true">
+        <mat-label>Hour</mat-label>
+        <input type="text" matInput [(ngModel)]="dateHour" pattern="(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}"
+          placeholder="HH:MM:SS">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+      <button mat-raised-button color="primary" (click)="validate()">Verify</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</fieldset>
